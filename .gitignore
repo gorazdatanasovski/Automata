@@ -1,0 +1,8 @@
+node_modules/
+dist/
+logs/
+.env
+data/ledger.csv
+node.zip
+node_bin/
+.sixth/

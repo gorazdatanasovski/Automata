@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  automata-engine:
+    build: .
+    image: automata:latest
+    environment:
+      - EXECUTION_MODE=stealth
+      - HEADLESS=true
+      - BROWSER_TIMEOUT_MS=30000
+    volumes:
+      - ./data:/app/data
+    restart: on-failure

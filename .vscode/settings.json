@@ -1,0 +1,647 @@
+{
+    // ============================================================
+    // � I. PERSISTENCE & ENVIRONMENT
+    // ============================================================
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+    "editor.formatOnSave": true,
+    "workbench.productIconTheme": "Default",
+    "explorer.confirmDragAndDrop": false,
+    "explorer.compactFolders": true,
+    "extensions.ignoreRecommendations": true,
+    "workbench.tips.enabled": false,
+    "update.showReleaseNotes": false,
+    "editor.scrollbar.verticalScrollbarSize": 0,
+    "editor.scrollbar.horizontalScrollbarSize": 0,
+    // ============================================================
+    // � II. PYTHON � SILENCE THE NOISE, ENFORCE THE SIGNAL
+    // ============================================================
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+    "python.terminal.activateEnvironment": true,
+    "python.languageServer": "Pylance",
+    "python.analysis.typeCheckingMode": "off",
+    "python.analysis.diagnosticMode": "openFilesOnly",
+    "python.analysis.reportMissingTypeStubs": "none",
+    "python.analysis.reportGeneralTypeIssues": "none",
+    "python.analysis.reportMissingImports": "none",
+    "python.analysis.reportMissingModuleSource": "none",
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportAttributeAccessIssue": "none",
+        "reportUnknownMemberType": "none",
+        "reportOptionalMemberAccess": "none",
+        "reportArgumentType": "none",
+        "reportCallIssue": "none",
+        "reportUndefinedVariable": "none"
+    },
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/src"
+    ],
+    // ============================================================
+    // � III. LATEX (LuaLaTeX � for formal proof typesetting)
+    // ============================================================
+    "latex-workshop.latex.tools": [
+        {
+            "name": "lualatex",
+            "command": "lualatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "LuaLaTeX",
+            "tools": [
+                "lualatex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipe.default": "LuaLaTeX",
+    // ============================================================
+    // � IV. INTELLISENSE � PRECISION AUTOCOMPLETE ONLY
+    //        Ghost text is cognitive noise. Killed.
+    // ============================================================
+    "editor.inlineSuggest.enabled": false,
+    "editor.suggestSelection": "first",
+    "editor.suggest.shareSuggestSelections": false,
+    "editor.tabCompletion": "on",
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.suggest.insertMode": "replace",
+    "editor.suggest.preview": true,
+    "editor.snippetSuggestions": "bottom",
+    "editor.suggest.showMethods": true,
+    "editor.quickSuggestions": {
+        "other": "on",
+        "comments": "off",
+        "strings": "on"
+    },
+    "github.copilot.enable": {
+        "*": false
+    },
+    // ============================================================
+    // � V. TYPOGRAPHY � INSTITUTIONAL TERMINAL GRADE
+    //       JetBrains Mono: sub-pixel hinting, zero ambiguity.
+    //       Ligatures enforce mathematical notation density.
+    // ============================================================
+    "editor.fontFamily": "'JetBrains Mono', 'Fira Code', 'Consolas', monospace",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+    "editor.lineHeight": 24,
+    "editor.fontWeight": "400",
+    "editor.letterSpacing": 0.3,
+    // ============================================================
+    // � VI. EDITOR CHROME � ABSOLUTE VOID
+    //        Every chrome element that does not encode information
+    //        is structural entropy. It has been eliminated.
+    // ============================================================
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "selection",
+    "editor.renderControlCharacters": false,
+    "editor.scrollbar.vertical": "hidden",
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.overviewRulerLanes": 0,
+    "editor.overviewRulerBorder": false,
+    "editor.matchBrackets": "never",
+    "editor.renderLineHighlight": "none",
+    "editor.occurrencesHighlight": "off",
+    "editor.selectionHighlight": false,
+    "editor.scrollBeyondLastLine": false,
+    "editor.glyphMargin": false,
+    "editor.lineNumbers": "on",
+    "editor.cursorWidth": 2,
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.smoothScrolling": true,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "editor.guides.indentation": false,
+    "editor.hover.delay": 800,
+    "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?",
+    // ============================================================
+    // � VII. WORKBENCH CHROME � STRIPPED TO ZERO
+    // ============================================================
+    "breadcrumbs.enabled": false,
+    "workbench.layoutControl.enabled": false,
+    "workbench.activityBar.location": "hidden",
+    "workbench.editor.showTabs": "single",
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.decorations.badges": false,
+    "workbench.editor.decorations.colors": false,
+    "window.commandCenter": false,
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "workbench.sideBar.location": "left",
+    "problems.decorations.enabled": false,
+    // ============================================================
+    // � VIII. COLOR ARCHITECTURE � OBSIDIAN VOID SYSTEM
+    //
+    //   PALETTE:
+    //   #000000  � Absolute void. Universal background.
+    //   #D3DAD9  � Cold neutral. Primary text. No warmth.
+    //   #557373  � Muted teal. Comments, line numbers, self.
+    //   #FFA028  � Amber. Cursor, keywords, decorators. (Bloomberg orange)
+    //   #0068FF  � Institutional blue. Functions.
+    //   #CD27FF  � Violet. Classes, types.
+    //   #4AF6C3  � Mint. Strings. High legibility on void.
+    //   #FF433D  � Signal red. Numbers, errors, enum members. (P&L loss read)
+    // ============================================================
+    "workbench.colorCustomizations": {
+        // --- Global chrome ---
+        "focusBorder": "#00000000",
+        "widget.shadow": "#00000000",
+        "selection.background": "#0068FF30",
+        // --- Editor ---
+        "editor.background": "#000000",
+        "editor.foreground": "#D3DAD9",
+        "editor.lineHighlightBackground": "#000000",
+        "editor.lineHighlightBorder": "#00000000",
+        "editor.selectionBackground": "#0068FF40",
+        "editor.inactiveSelectionBackground": "#0068FF20",
+        "editor.wordHighlightBackground": "#00000000",
+        "editor.wordHighlightBorder": "#00000000",
+        "editor.wordHighlightStrongBackground": "#00000000",
+        "editor.findMatchBackground": "#FFA02830",
+        "editor.findMatchBorder": "#FFA02880",
+        "editor.findMatchHighlightBackground": "#FFA02815",
+        "editor.rangeHighlightBackground": "#00000000",
+        // --- Cursor ---
+        "editorCursor.foreground": "#FFA028",
+        "editorCursor.background": "#000000",
+        "terminalCursor.foreground": "#FFA028",
+        // --- Gutter & Margins ---
+        "editorGutter.background": "#000000",
+        "editorGutter.addedBackground": "#4AF6C340",
+        "editorGutter.modifiedBackground": "#FFA02840",
+        "editorGutter.deletedBackground": "#FF433D40",
+        "editorLineNumber.foreground": "#557373",
+        "editorLineNumber.activeForeground": "#D3DAD9",
+        // --- Whitespace & Guides ---
+        "editorWhitespace.foreground": "#ffffff10",
+        "editorIndentGuide.background1": "#00000000",
+        "editorIndentGuide.activeBackground1": "#ffffff15",
+        // --- Diagnostics ---
+        "editorError.foreground": "#FF433D",
+        "editorError.border": "#00000000",
+        "editorWarning.foreground": "#FFA028",
+        "editorWarning.border": "#00000000",
+        "editorInfo.foreground": "#0068FF",
+        "editorInfo.border": "#00000000",
+        "editorHint.foreground": "#557373",
+        // --- Bracket Pairs ---
+        "editorBracketHighlight.foreground1": "#FFA028",
+        "editorBracketHighlight.foreground2": "#4AF6C3",
+        "editorBracketHighlight.foreground3": "#0068FF",
+        "editorBracketHighlight.unexpectedBracket.foreground": "#FF433D",
+        // --- Scrollbar ---
+        "scrollbarSlider.background": "#00000000",
+        "scrollbarSlider.hoverBackground": "#00000000",
+        "scrollbarSlider.activeBackground": "#00000000",
+        "scrollbar.shadow": "#00000000",
+        // --- Widgets (autocomplete, hover, peek) ---
+        "editorWidget.background": "#000000",
+        "editorWidget.foreground": "#D3DAD9",
+        "editorWidget.border": "#1a1a1a",
+        "editorSuggestWidget.background": "#000000",
+        "editorSuggestWidget.border": "#1a1a1a",
+        "editorSuggestWidget.foreground": "#D3DAD9",
+        "editorSuggestWidget.highlightForeground": "#FFA028",
+        "editorSuggestWidget.selectedBackground": "#0068FF20",
+        "editorHoverWidget.background": "#000000",
+        "editorHoverWidget.border": "#1a1a1a",
+        "peekView.border": "#0068FF40",
+        "peekViewEditor.background": "#000000",
+        "peekViewResult.background": "#000000",
+        "peekViewTitle.background": "#000000",
+        // --- Overview ruler ---
+        "editorOverviewRuler.border": "#00000000",
+        "editorOverviewRuler.errorForeground": "#FF433D80",
+        "editorOverviewRuler.warningForeground": "#FFA02880",
+        // --- Sidebar ---
+        "sideBar.background": "#000000",
+        "sideBar.foreground": "#D3DAD9",
+        "sideBar.border": "#00000000",
+        "sideBarTitle.foreground": "#557373",
+        "sideBarSectionHeader.background": "#000000",
+        "sideBarSectionHeader.foreground": "#557373",
+        "sideBarSectionHeader.border": "#00000000",
+        // --- File explorer lists ---
+        "list.activeSelectionBackground": "#000000",
+        "list.activeSelectionForeground": "#D3DAD9",
+        "list.inactiveSelectionBackground": "#000000",
+        "list.inactiveSelectionForeground": "#D3DAD9",
+        "list.hoverBackground": "#0a0a0a",
+        "list.focusBackground": "#0068FF15",
+        "list.focusForeground": "#D3DAD9",
+        "list.highlightForeground": "#FFA028",
+        // --- Tabs ---
+        "tab.activeBackground": "#000000",
+        "tab.inactiveBackground": "#000000",
+        "tab.activeForeground": "#D3DAD9",
+        "tab.inactiveForeground": "#557373",
+        "tab.border": "#00000000",
+        "tab.activeBorderTop": "#FFA028",
+        "tab.inactiveBorderTop": "#00000000",
+        "editorGroupHeader.tabsBackground": "#000000",
+        "editorGroupHeader.tabsBorder": "#00000000",
+        "editorGroup.border": "#00000000",
+        "editorGroup.dropBackground": "#0068FF10",
+        // --- Title bar ---
+        "titleBar.activeBackground": "#000000",
+        "titleBar.inactiveBackground": "#000000",
+        "titleBar.activeForeground": "#557373",
+        "titleBar.border": "#00000000",
+        // --- Panel (terminal, output) ---
+        "panel.background": "#000000",
+        "panel.border": "#00000000",
+        "panel.dropBorder": "#0068FF40",
+        "panelTitle.activeBorder": "#FFA028",
+        "panelTitle.activeForeground": "#D3DAD9",
+        "panelTitle.inactiveForeground": "#557373",
+        "input.background": "#000000",
+        "input.border": "#1a1a1a",
+        "input.foreground": "#D3DAD9",
+        "input.placeholderForeground": "#557373",
+        // --- Terminal ---
+        "terminal.background": "#000000",
+        "terminal.foreground": "#D3DAD9",
+        "terminal.selectionBackground": "#0068FF40",
+        "terminal.ansiBlack": "#000000",
+        "terminal.ansiRed": "#FF433D",
+        "terminal.ansiGreen": "#4AF6C3",
+        "terminal.ansiYellow": "#FFA028",
+        "terminal.ansiBlue": "#0068FF",
+        "terminal.ansiMagenta": "#CD27FF",
+        "terminal.ansiCyan": "#4AF6C3",
+        "terminal.ansiWhite": "#D3DAD9",
+        "terminal.ansiBrightBlack": "#557373",
+        "terminal.ansiBrightRed": "#FF433D",
+        "terminal.ansiBrightGreen": "#4AF6C3",
+        "terminal.ansiBrightYellow": "#FFA028",
+        "terminal.ansiBrightBlue": "#0068FF",
+        "terminal.ansiBrightMagenta": "#CD27FF",
+        "terminal.ansiBrightCyan": "#4AF6C3",
+        "terminal.ansiBrightWhite": "#ffffff",
+        // --- Diff editor ---
+        "diffEditor.removedTextBorder": "#00000000",
+        "diffEditor.insertedTextBorder": "#00000000",
+        "diffEditor.removedTextBackground": "#FF433D20",
+        "diffEditor.insertedTextBackground": "#4AF6C318",
+        "diffEditor.diagonalFill": "#00000000",
+        // --- Notifications ---
+        "notifications.background": "#000000",
+        "notifications.border": "#1a1a1a",
+        "notificationLink.foreground": "#0068FF",
+        // --- Status bar (hidden, but color if ever shown) ---
+        "statusBar.background": "#000000",
+        "statusBar.foreground": "#557373",
+        "statusBar.border": "#00000000",
+        "statusBar.debuggingBackground": "#FF433D",
+        "statusBar.noFolderBackground": "#000000",
+        // --- Command palette ---
+        "quickInput.background": "#000000",
+        "quickInput.foreground": "#D3DAD9",
+        "quickInputList.focusBackground": "#0068FF20",
+        // --- Context Menus & UI Dropdowns ---
+        "menu.background": "#000000",
+        "menu.foreground": "#D3DAD9",
+        "menu.selectionBackground": "#0068FF20",
+        "menu.selectionForeground": "#D3DAD9",
+        "menu.separatorBackground": "#1a1a1a",
+        // --- Code Folding (Zero Bleed) ---
+        "editor.foldBackground": "#00000000",
+        "editorGutter.foldingControlForeground": "#557373",
+        // --- Badges (Preventing arbitrary color injections) ---
+        "badge.background": "#000000",
+        "badge.foreground": "#557373",
+        // --- Explorer depth indent guides ---
+        "tree.indentGuidesStroke": "#ffffff09",
+        "tree.activeIndentGuidesStroke": "#ffffff1c",
+        // ============================================================
+        // § XIV. EXPLORER DEPTH ARCHITECTURE — OBSIDIAN VOID SYSTEM
+        //        Depth coloring is injected via vscode-custom.css.
+        //        Palette: L1 #D3DAD9 → L2 #FFA028 → L3 #0068FF
+        //                 L4 #CD27FF → L5+ #4AF6C3
+        //        Files always: #D3DAD9. Folders signal depth.
+        // ============================================================
+    },
+    // ============================================================
+    // � IX. SEMANTIC TOKEN HIGHLIGHTING
+    //        Semantic layer overrides TextMate. Applied first.
+    // ============================================================
+    // ============================================================
+    // § XIV. EXPLORER DEPTH ARCHITECTURE - OBSIDIAN VOID SYSTEM
+    // ============================================================
+    // --- Explorer depth architecture ---
+    "workbench.tree.indent": 16,
+    "workbench.tree.renderIndentGuides": "always",
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.expand": false,
+    "explorer.fileNesting.patterns": {
+        "pyproject.toml": "poetry.lock, .python-version, setup.cfg, setup.py, requirements*.txt, .env, .env.*",
+        "*.py": "${capture}_test.py, test_${capture}.py, ${capture}.pyi",
+        "*.ipynb": "${capture}.py",
+        ".gitignore": ".gitattributes, .gitmodules, .editorconfig",
+        "Dockerfile": "docker-compose*.yml, .dockerignore",
+        "README*": "CHANGELOG*, LICENSE*, CONTRIBUTING*"
+    },
+    // ============================================================
+    // § IX. SEMANTIC TOKEN HIGHLIGHTING
+    //        Semantic layer overrides TextMate. Applied first.
+    // ============================================================
+    "editor.semanticHighlighting.enabled": true,
+    "editor.semanticTokenColorCustomizations": {
+        "enabled": true,
+        "rules": {
+            "class": {
+                "foreground": "#CD27FF",
+                "fontStyle": "bold"
+            },
+            "type": {
+                "foreground": "#CD27FF",
+                "fontStyle": ""
+            },
+            "typeParameter": {
+                "foreground": "#CD27FF",
+                "fontStyle": "italic"
+            },
+            "interface": {
+                "foreground": "#CD27FF",
+                "fontStyle": ""
+            },
+            "enum": {
+                "foreground": "#CD27FF",
+                "fontStyle": ""
+            },
+            "function": {
+                "foreground": "#0068FF",
+                "fontStyle": ""
+            },
+            "function.defaultLibrary": {
+                "foreground": "#0068FF",
+                "fontStyle": "italic"
+            },
+            "method": {
+                "foreground": "#0068FF",
+                "fontStyle": ""
+            },
+            "macro": {
+                "foreground": "#FFA028",
+                "fontStyle": "italic"
+            },
+            "parameter": {
+                "foreground": "#D3DAD9",
+                "fontStyle": "italic"
+            },
+            "parameter.selfParameter": {
+                "foreground": "#557373",
+                "fontStyle": "italic"
+            },
+            "variable": {
+                "foreground": "#D3DAD9"
+            },
+            "variable.readonly": {
+                "foreground": "#D3DAD9",
+                "fontStyle": "italic"
+            },
+            "property": {
+                "foreground": "#D3DAD9"
+            },
+            "enumMember": {
+                "foreground": "#FF433D"
+            },
+            "decorator": {
+                "foreground": "#FFA028",
+                "fontStyle": "italic"
+            },
+            "namespace": {
+                "foreground": "#557373"
+            },
+            "number": {
+                "foreground": "#FF433D"
+            },
+            "string": {
+                "foreground": "#4AF6C3"
+            },
+            "keyword": {
+                "foreground": "#FFA028"
+            },
+            "comment": {
+                "foreground": "#557373"
+            }
+        }
+    },
+    // ============================================================
+    // � X. TEXTMATE TOKEN RULES � PYTHON PRECISION LAYER
+    // ============================================================
+    "editor.tokenColorCustomizations": {
+        "comments": "#557373",
+        "strings": "#4AF6C3",
+        "keywords": "#FFA028",
+        "numbers": "#FF433D",
+        "types": "#CD27FF",
+        "functions": "#0068FF",
+        "variables": "#D3DAD9",
+        "textMateRules": [
+            {
+                "scope": [
+                    "string.quoted.docstring.multi.python",
+                    "string.quoted.docstring.single.python"
+                ],
+                "settings": {
+                    "foreground": "#557373",
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": [
+                    "constant.language",
+                    "constant.numeric"
+                ],
+                "settings": {
+                    "foreground": "#FF433D",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "scope": [
+                    "keyword.control",
+                    "keyword.operator.logical"
+                ],
+                "settings": {
+                    "foreground": "#FFA028",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "scope": [
+                    "keyword.operator"
+                ],
+                "settings": {
+                    "foreground": "#FFA028",
+                    "fontStyle": ""
+                }
+            },
+            {
+                "scope": [
+                    "punctuation.definition.string.begin.python",
+                    "punctuation.definition.string.end.python",
+                    "meta.fstring.python"
+                ],
+                "settings": {
+                    "foreground": "#4AF6C3"
+                }
+            },
+            {
+                "scope": [
+                    "constant.character.format.placeholder.other.python",
+                    "punctuation.section.embedded.begin.python",
+                    "punctuation.section.embedded.end.python"
+                ],
+                "settings": {
+                    "foreground": "#FFA028"
+                }
+            },
+            {
+                "scope": [
+                    "meta.function.decorator.python",
+                    "entity.name.function.decorator.python"
+                ],
+                "settings": {
+                    "foreground": "#FFA028",
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": [
+                    "entity.name.type.class.python"
+                ],
+                "settings": {
+                    "foreground": "#CD27FF",
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "scope": [
+                    "support.function.builtin.python"
+                ],
+                "settings": {
+                    "foreground": "#0068FF",
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": [
+                    "variable.parameter.function.language.special.self.python"
+                ],
+                "settings": {
+                    "foreground": "#557373",
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": [
+                    "punctuation.separator",
+                    "punctuation.terminator"
+                ],
+                "settings": {
+                    "foreground": "#557373"
+                }
+            },
+            {
+                "scope": [
+                    "storage.type",
+                    "storage.modifier"
+                ],
+                "settings": {
+                    "foreground": "#FFA028",
+                    "fontStyle": "bold"
+                }
+            }
+        ]
+    },
+    // ============================================================
+    // � XI. APC GLASSMORPHISM LAYER
+    //        This is what separates the configuration from all others.
+    //        Frameless. Transparent substrate. Zero chrome mass.
+    // ============================================================
+    "apc.electron": {
+        "backgroundColor": "#000000",
+        "frame": false,
+        "vibrancy": "ultra-dark",
+        "transparent": true
+    },
+    "apc.stylesheet": {
+        ".monaco-editor .cursor": "transition: all 80ms cubic-bezier(0.23, 1, 0.32, 1) !important; border-radius: 2px !important;",
+        "::-webkit-scrollbar": "display: none !important;",
+        ".monaco-workbench .part.editor > .content": "backdrop-filter: blur(0px) !important;",
+        ".title-label h2": "opacity: 0 !important;",
+        ".tabs-container": "border-bottom: none !important;",
+        ".monaco-editor .margin": "background-color: #000000 !important;",
+        ".monaco-workbench .part.panel": "background-color: #000000 !important;",
+        ".editor-widget": "background-color: #000000 !important; box-shadow: none !important; border: 1px solid #1a1a1a !important;",
+        ".notifications-toasts": "opacity: 0.85 !important;",
+        ".context-view .monaco-menu": "background-color: #000000 !important; border: 1px solid #1a1a1a !important;",
+        ".monaco-workbench .part.sidebar": "background-color: #000000 !important;",
+        ".monaco-sash": "opacity: 0 !important;",
+        ".xterm .xterm-scrollbar-container": "display: none !important;",
+        ".monaco-workbench .explorer-folders-view .monaco-list-row .label-name": "color: #D3DAD9 !important;",
+        ".monaco-workbench .explorer-folders-view .monaco-list-row[aria-level='1'][aria-expanded] .label-name": "color: #D3DAD9 !important; letter-spacing: 0.04em !important;",
+        ".monaco-workbench .explorer-folders-view .monaco-list-row[aria-level='2'][aria-expanded] .label-name": "color: #FFA028 !important;",
+        ".monaco-workbench .explorer-folders-view .monaco-list-row[aria-level='3'][aria-expanded] .label-name": "color: #0068FF !important;",
+        ".monaco-workbench .explorer-folders-view .monaco-list-row[aria-level='4'][aria-expanded] .label-name": "color: #CD27FF !important;",
+        ".monaco-workbench .explorer-folders-view .monaco-list-row[aria-level='5'][aria-expanded] .label-name": "color: #4AF6C3 !important;",
+        ".monaco-workbench .explorer-folders-view .monaco-list-row[aria-level='6'][aria-expanded] .label-name": "color: #FF433D !important;",
+        ".monaco-workbench .explorer-folders-view .monaco-list-row[aria-level='7'][aria-expanded] .label-name": "color: #00D4FF !important;",
+        ".monaco-workbench .explorer-folders-view .monaco-list-row[aria-level='8'][aria-expanded] .label-name": "color: #B6FF4A !important;",
+        ".monaco-workbench .explorer-folders-view .monaco-list-row[aria-level='9'][aria-expanded] .label-name": "color: #FF6B9A !important;",
+        ".monaco-workbench .explorer-folders-view .monaco-list-row[aria-level='10'][aria-expanded] .label-name": "color: #F7D774 !important;",
+        ".monaco-workbench .explorer-folders-view .monaco-list-row[aria-level='11'][aria-expanded] .label-name": "color: #8B5CF6 !important;",
+        ".monaco-workbench .explorer-folders-view .monaco-list-row[aria-level='12'][aria-expanded] .label-name": "color: #2CE6FF !important;",
+        ".monaco-workbench .explorer-folders-view .monaco-tl-twistie.collapsible::before": "color: #557373 !important;",
+        ".monaco-workbench .explorer-folders-view .monaco-tl-indent > .indent-guide": "border-color: #ffffff08 !important;",
+        ".monaco-workbench .explorer-folders-view .monaco-tl-indent > .indent-guide.active": "border-color: #ffffff22 !important;"
+    },
+    "apc.header": {
+        "height": 36
+    },
+    "apc.sidebar.titlebar": {
+        "height": 0
+    },
+    // ============================================================
+    // � XII. DATABASE (SQLTools � local MySQL)
+    // ============================================================
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "ssh": "Disabled",
+            "previewLimit": 50,
+            "server": "127.0.0.1",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "local-mysql",
+            "username": "root",
+            "database": "mysql"
+        }
+    ],
+    // ============================================================
+    // � XIII. COGNITIVE NOISE SUPPRESSION � APEX STATE
+    // ============================================================
+    "window.menuBarVisibility": "hidden",
+    "vscode_custom_css.imports": [
+        "file:///C:/Users/johndoe/Desktop/CME_June/.vscode/vscode-custom.css",
+        "file:///C:/Users/johndoe/Desktop/CME_June/.vscode/vscode-custom.js"
+    ],
+    "vscode_custom_css.policy": true,
+    "editor.codeLens": false,
+    "editor.lightbulb.enabled": "off",
+    "editor.stickyScroll.enabled": false,
+    "editor.inlayHints.enabled": "off",
+    "python.analysis.inlayHints.variableTypes": false,
+    "explorer.compactFolders": false,
+    "python.analysis.inlayHints.functionReturnTypes": false
+}

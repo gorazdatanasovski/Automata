@@ -1,0 +1,104 @@
+{
+  "personal": {
+    "first_name": "John",
+    "last_name": "Doe",
+    "middle_name": "",
+    "preferred_name": "",
+    "email": "johndoe@example.com",
+    "phone": "+10000000000",
+    "phone_country_code": "United States",
+    "linkedin": "https://www.linkedin.com/in/johndoe",
+    "github": "https://github.com/johndoe",
+    "website": "https://johndoe.com",
+    "pronouns": "He/Him",
+    "languages": "English (fluent), French (professional), German (professional), Macedonian (native)"
+  },
+  "address": {
+    "location": "City, State, Country",
+    "street_address": "123 Main St",
+    "city": "City",
+    "state": "State",
+    "state_abbr": "ST",
+    "zip": "00000",
+    "country": "United States"
+  },
+  "education": {
+    "school_name": "University Name",
+    "degree_type": "Bachelor of Business Administration",
+    "current_education_level": "Undergraduate",
+    "major": "Finance and Analytics",
+    "minor": "",
+    "gpa": "4.0",
+    "education_start_month": "August",
+    "education_start_year": "2023",
+    "education_end_month": "December",
+    "education_end_year": "2027",
+    "graduation_date": "May 2024",
+    "hs_grad_year": "2023",
+    "currently_student": "yes",
+    "ft_employment_year": "2026"
+  },
+  "employment": {
+    "company_name": "Company Name",
+    "job_title": "Founder & Lead Strategist",
+    "employment_start_month": "August",
+    "employment_start_year": "2023",
+    "employment_end_month": "",
+    "employment_end_year": ""
+  },
+  "legal": {
+    "work_authorization": "yes",
+    "requires_sponsorship_current": "no",
+    "requires_sponsorship_future": "yes",
+    "us_citizen": "no",
+    "permanent_resident": "no",
+    "visa_type": "F-1 OPT STEM",
+    "authorization_expiry": "December 2030",
+    "country_of_citizenship": "North Macedonia",
+    "age_18_plus": "yes",
+    "felony": "no"
+  },
+  "application": {
+    "source": "LinkedIn",
+    "interviewed_before": "No",
+    "has_other_offers": "No",
+    "start_month": "January",
+    "start_year": "2026",
+    "willing_to_relocate": "yes",
+    "preferred_location": "Chicago, IL",
+    "remote_preference": "On-site",
+    "salary_expectation": "",
+    "notice_period": "0 months",
+    "non_compete": "None",
+    "non_compete_comments": "None. Current undergraduate student."
+  },
+  "long_form": {
+    "why_interested": "[Why interested text]",
+    "cover_letter_text": "[Cover letter text]",
+    "job_change_reason": ""
+  },
+  "files": {
+    "resume_upload": "/path/to/resume.pdf",
+    "cover_letter_upload": "/path/to/cover_letter.pdf"
+  },
+  "eeo": {
+    "gender": "Male",
+    "hispanic_latino": "No",
+    "race_ethnicity": "White",
+    "veteran_status": "Not a veteran",
+    "disability_status": "No"
+  },
+  "metadata": {
+    "degree": "Bachelor of Business Administration",
+    "majors": [
+      "Finance",
+      "Analytics"
+    ],
+    "cumulative_gpa": "3.74",
+    "expected_graduation": "December 2027",
+    "school_year": "Junior",
+    "stem_designated": true,
+    "bloomberg_certified": true,
+    "curcs_grant": true
+  }
+}

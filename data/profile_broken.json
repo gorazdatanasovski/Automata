@@ -1,0 +1,24 @@
+{
+  "personal": {
+    "first_name": "Jane",
+    "last_name": "Doe",
+    "email": "janedoe-invalid-email",
+    "phone": "123-456-7890",
+    "website": "https://janedoe.com",
+    "linkedin": "https://linkedin.com/in/janedoe",
+    "github": "https://github.com/janedoe"
+  },
+  "legal": {
+    "work_authorization_us": "yes",
+    "requires_sponsorship_future": "no",
+    "requires_sponsorship_current": "no",
+    "visa_type_current": "US_Citizen"
+  },
+  "metadata": {
+    "expected_graduation": "May 2024",
+    "degree": "Bachelor of Science",
+    "majors": ["Computer Science"],
+    "minor": "Mathematics",
+    "cumulative_gpa": "3.8"
+  }
+}

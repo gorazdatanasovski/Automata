@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mock Form test</title>
+</head>
+<body>
+    <form id="mock-form">
+        <!-- 1. Explicit Association via 'for' -->
+        <div class="form-group">
+            <label for="fname">Legal First Name*:</label>
+            <input type="text" id="fname" />
+        </div>
+
+        <!-- 2. Ancestral Traversal (No explicit connection) -->
+        <fieldset>
+            <span>Email Address:</span>
+            <input type="text" />
+        </fieldset>
+
+        <!-- 3. Shadow DOM / Web Component -->
+        <div id="shadow-host"></div>
+        <script>
+            const host = document.getElementById('shadow-host');
+            const shadow = host.attachShadow({mode: 'open'});
+            shadow.innerHTML = `
+                <div>
+                    <span id="linked-label">LinkedIn Profile URL</span>
+                    <input type="text" aria-labelledby="linked-label" />
+                </div>
+            `;
+        </script>
+
+        <!-- 4. Ambiguous Viewport Fallback Test (High distance, low confidence) -->
+        <div style="position: absolute; top: 1500px; left: 50px;" id="sponsorship-text">
+            Require Visa Sponsorship
+        </div>
+        <div style="position: absolute; top: 1700px; left: 50px;">
+            <select id="sponsorship-select">
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+        </div>
+
+    </form>
+</body>
+</html>
