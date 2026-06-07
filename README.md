@@ -15,11 +15,11 @@ graph TD
     B --> D[Greenhouse Adapter]
     B --> E[Lever Adapter]
     
-    C --> F["Stealth Context (Playwright)"]
+    C --> F[Stealth Context Playwright]
     D --> F
     E --> F
     
-    F --> G[DOM Scanner & Parser]
+    F --> G[DOM Scanner and Parser]
     G --> H[Semantic Dictionary]
 ```
 
