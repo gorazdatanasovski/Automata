@@ -9,16 +9,14 @@ Automata is a high-performance, deterministic automation engine designed for com
 ## Architecture
 
 ```mermaid
-graph TD
+flowchart TD
     A[Orchestrator Core] --> B{Adapter Router}
     B --> C[Workday Adapter]
     B --> D[Greenhouse Adapter]
     B --> E[Lever Adapter]
-    
     C --> F[Stealth Context Playwright]
     D --> F
     E --> F
-    
     F --> G[DOM Scanner and Parser]
     G --> H[Semantic Dictionary]
 ```
